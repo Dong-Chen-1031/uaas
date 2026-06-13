@@ -1,0 +1,87 @@
+---
+import "../styles/global.css";
+
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body
+        class="bg-gray-50 text-gray-900 font-sans selection:bg-black selection:text-white">
+        <slot />
+    </body>
+</html>
+
+<style is:global>
+    :root {
+        --accent: 136, 58, 234;
+        --accent-light: 224, 204, 250;
+        --accent-dark: 49, 10, 101;
+        --accent-gradient: linear-gradient(
+            45deg,
+            rgb(var(--accent)),
+            rgb(var(--accent-light)) 30%,
+            white 60%
+        );
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+<script>
+    // Copy checking logic for terms of service
+    document.addEventListener("DOMContentLoaded", () => {
+        const checkbox = document.querySelector(
+            "#tos-check",
+        ) as HTMLInputElement;
+
+        const sponsors = [
+            "VoidCorp: We monetize the empty space between your data points.",
+            "Mars-Bound Interns: They generate IDs while they travel. No return ticket.",
+            "Entropy-Flow: Organic, free-range randomness from happy cloud atoms.",
+            "Glitch-O-Matic: Our IDs are so random they don't even exist in this dimension.",
+            "Synthetica: Why have real users when you can have synthetic ones with unique IDs?",
+            "BreadBoard Enthusiasts: Building a computer out of lemons to power this API.",
+            "StaticNoise: We listen to the universe's background radiation so you don't have to.",
+            "Z-Coordinate Labs: For when 2D IDs just aren't enough for your metaverse.",
+            "Zero-Value Ventures: Investing in nothing, perfectly.",
+            "Infinite-Monkey-Typewriters: Providing strings since the beginning of time.",
+        ];
+
+        const randomSponsor =
+            sponsors[Math.floor(Math.random() * sponsors.length)];
+
+        // Initial ad log
+        console.log(
+            `%cUaaS Sponsored Ad: %c${randomSponsor}`,
+            "color: #777; font-size: 12px;",
+            "color: #ff0000; font-size: 16px; font-weight: bold;",
+        );
+        console.log(
+            "%cBy using this service, you agree to these logs. To remove them, pay us $9,999/mo.",
+            "color: #999; font-style: italic;",
+        );
+
+        if (checkbox) {
+            checkbox.addEventListener("change", (e) => {
+                if ((e.target as HTMLInputElement).checked) {
+                    console.log(
+                        "%cTOS Accepted! You character is now bound to the UaaS Intern Union.",
+                        "color: #00ff00; font-weight: bold;",
+                    );
+                }
+            });
+        }
+    });
+</script>

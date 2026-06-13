@@ -1,0 +1,91 @@
+---
+import dong from "../assets/dong.png";
+import { Image } from "astro:assets";
+---
+
+<section class="max-w-4xl mx-auto px-6 py-20 border-t border-gray-100">
+    <div class="mb-20">
+        <h2 class="text-3xl font-bold mb-8 text-center">System Status</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div
+                class="bg-gray-50 p-6 rounded-2xl flex justify-between items-center border border-gray-100">
+                <span class="font-bold">API Endpoint</span>
+                <span class="text-green-600 font-bold flex items-center gap-2">
+                    <span
+                        class="w-2 h-2 rounded-full bg-green-500 animate-pulse"
+                    ></span>
+                    99.9% Operational
+                </span>
+            </div>
+            <div
+                class="bg-gray-50 p-6 rounded-2xl flex justify-between items-center border border-gray-100">
+                <span class="font-bold">Joe's Morale</span>
+                <span class="text-red-500 font-bold flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-red-500"></span>
+                    Degraded
+                </span>
+            </div>
+        </div>
+
+        <div class="mt-8 space-y-4">
+            <div class="p-4 border border-gray-100 rounded-xl text-sm">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="font-bold text-yellow-600 uppercase text-xs"
+                        >Partial Outage</span
+                    >
+                    <span class="text-gray-400">June 13, 2026</span>
+                </div>
+                <p class="text-gray-600">
+                    The intern forgot to buy fresh alkaline batteries for the
+                    random number generator. Users may experience "less random"
+                    IDs for the next 2 hours. We have switched to using the
+                    number 42 for all requests.
+                </p>
+            </div>
+            <div
+                class="p-4 border border-gray-100 rounded-xl text-sm opacity-60">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="font-bold text-gray-500 uppercase text-xs"
+                        >Maintenance</span
+                    >
+                    <span class="text-gray-400">June 10, 2026</span>
+                </div>
+                <p class="text-gray-600">
+                    Upgrading Joe's chair. This should improve UUID throughput
+                    by 12%.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h2 class="text-3xl font-bold mb-12 text-center">Meet the Team</h2>
+        <div class="flex justify-center gap-12 text-center">
+            <div class="group">
+                <div
+                    class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden border-4 border-white shadow-xl group-hover:scale-110 transition-transform">
+                    <Image src={dong} alt="Dong the Founder" />
+                </div>
+                <div class="font-bold text-lg">Dong</div>
+                <div class="text-gray-500 text-sm">Founder & Visionary</div>
+            </div>
+            <div class="group grayscale opacity-50">
+                <div
+                    class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden border-4 border-white shadow-xl group-hover:scale-110 transition-transform">
+                    <img
+                        src="https://api.dicebear.com/7.x/avataaars/svg?seed=w"
+                        alt="Senior Intern"
+                    />
+                </div>
+                <div class="font-bold text-lg">Joe</div>
+                <div class="text-gray-500 text-sm">
+                    Senior Intern (On Leave)
+                </div>
+            </div>
+        </div>
+        <p class="text-center mt-12 text-gray-400 italic">
+            Joe is currently on administrative leave. We wish him and his AI
+            girlfriend the best in Tokyo.
+        </p>
+    </div>
+</section>

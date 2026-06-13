@@ -1,0 +1,45 @@
+---
+import { Twitter, Github, GraduationCap } from "lucide-astro";
+---
+
+<footer
+    class="max-w-4xl mx-auto px-6 py-20 border-t border-gray-100 text-center">
+    <div class="mb-12">
+        <h2 class="text-xl font-bold mb-6">Terms of Service</h2>
+        <div
+            class="flex items-center justify-center gap-3 bg-gray-50 py-4 px-6 rounded-2xl w-fit mx-auto border border-gray-200">
+            <input
+                type="checkbox"
+                id="tos-check"
+                class="w-5 h-5 rounded border-gray-300 text-black focus:ring-black"
+            />
+            <label for="tos-check" class="text-gray-700 font-medium"
+                >I agree to let the service <code
+                    class="bg-gray-200 px-1 rounded">console.log</code
+                > ads in my users' browsers.</label
+            >
+        </div>
+    </div>
+
+    <div
+        class="flex flex-col md:flex-row justify-between items-center gap-8 text-gray-400 text-sm">
+        <p>© 2026 uuid.doong.me. All rights reserved by the interns.</p>
+        <div class="flex gap-8">
+            <a
+                href="#"
+                class="hover:text-black transition-colors flex items-center gap-1"
+                ><Twitter size={14} /> Twitter</a
+            >
+            <a
+                href="#"
+                class="hover:text-black transition-colors flex items-center gap-1"
+                ><Github size={14} /> GitHub</a
+            >
+            <a
+                href="#"
+                class="hover:text-black transition-colors flex items-center gap-1"
+                ><GraduationCap size={14} /> Careers</a
+            >
+        </div>
+    </div>
+</footer>

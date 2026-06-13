@@ -1,0 +1,81 @@
+---
+import { Check, X } from "lucide-astro";
+---
+
+<section
+    id="pricing"
+    class="max-w-4xl mx-auto px-6 py-20 border-t border-gray-100">
+    <h2 class="text-3xl font-bold mb-12 text-center">Simple Pricing</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div
+            class="border border-gray-200 rounded-3xl p-8 flex flex-col hover:border-black transition-colors">
+            <h3 class="text-lg font-bold mb-2">Hacker</h3>
+            <div class="text-4xl font-black mb-4">
+                $0 <span class="text-sm font-normal text-gray-500">/mo</span>
+            </div>
+            <p class="text-gray-600 mb-8">
+                For side projects that will never see the light of day.
+            </p>
+            <ul class="space-y-4 mb-8 flex-1">
+                <li class="flex items-center gap-2">
+                    <Check size={16} class="text-green-500" /> 100,000 IDs / month
+                </li>
+                <li class="flex items-center gap-2">
+                    <Check size={16} class="text-green-500" /> Public API access
+                </li>
+                <li class="flex items-center gap-2">
+                    <Check size={16} class="text-green-500" /> Community support (Twitter)
+                </li>
+                <li class="flex items-center gap-2">
+                    <X size={16} class="text-red-500" /> Mandatory Console Ads
+                </li>
+            </ul>
+            <a
+                href="#api"
+                class="block w-full text-center bg-black text-white py-3 rounded-xl font-bold"
+                >Start Building</a
+            >
+        </div>
+
+        <div
+            class="border border-gray-200 rounded-3xl p-8 flex flex-col bg-gray-50 opacity-75 relative overflow-hidden">
+            <div
+                class="absolute top-4 right-4 bg-yellow-400 text-black text-[10px] font-black px-2 py-1 rounded rotate-12">
+                OUT OF STOCK
+            </div>
+            <h3 class="text-lg font-bold mb-2">Web-Scale Enterprise</h3>
+            <div class="text-4xl font-black mb-4">
+                $9,999 <span class="text-sm font-normal text-gray-500"
+                    >/mo</span>
+            </div>
+            <p class="text-gray-600 mb-8">
+                For companies that have too much VC money.
+            </p>
+            <ul class="space-y-4 mb-8 flex-1">
+                <li class="flex items-center gap-2">
+                    <Check size={16} class="text-green-500" /> Unlimited IDs
+                </li>
+                <li class="flex items-center gap-2">
+                    <Check size={16} class="text-green-500" /> No Sponsor Messages
+                </li>
+                <li class="flex items-center gap-2">
+                    <Check size={16} class="text-green-500" /> Custom UUID versions
+                    (UUID 5, 6, 42)
+                </li>
+                <li class="flex items-center gap-2">
+                    <Check size={16} class="text-green-500" /> Joe's personal phone
+                    number
+                </li>
+            </ul>
+            <button
+                disabled
+                class="block w-full text-center bg-gray-300 text-gray-500 py-3 rounded-xl font-bold cursor-not-allowed"
+                >Unavailable</button
+            >
+        </div>
+    </div>
+    <p class="text-center mt-8 text-sm text-gray-500">
+        Enterprise plan is currently unavailable while Joe recovers from his
+        administrative leave.
+    </p>
+</section>

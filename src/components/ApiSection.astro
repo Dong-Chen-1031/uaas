@@ -1,0 +1,122 @@
+---
+
+---
+
+<section id="api" class="max-w-4xl mx-auto px-6 py-20 border-t border-gray-100">
+    <div class="mb-16">
+        <h2 class="text-3xl font-bold mb-4">One Simple API</h2>
+        <p class="text-gray-600 mb-6">
+            No authentication. No rate limits (we just let the server crash). No
+            complex headers.
+        </p>
+        <div
+            class="bg-gray-100 rounded-lg p-4 font-mono text-sm overflow-x-auto">
+            <span class="text-blue-600">GET</span> https://uuid.doong.me/api/uuid
+        </div>
+    </div>
+
+    <div class="space-y-16">
+        <div>
+            <h3 class="text-xl font-bold mb-4">Try it now!</h3>
+            <div
+                class="bg-white border-2 border-black rounded-2xl p-6 mb-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                <div
+                    class="flex flex-col md:flex-row gap-4 items-start md:items-center justify-between mb-6">
+                    <div>
+                        <span
+                            class="px-2 py-1 bg-green-100 text-green-700 text-xs font-bold rounded uppercase"
+                            >Endpoint</span
+                        >
+                        <code class="ml-2 text-sm font-bold">/api/uuid</code>
+                    </div>
+                    <button
+                        id="playground-btn"
+                        class="bg-black text-white px-6 py-2 rounded-full font-bold hover:bg-gray-800 transition-colors active:scale-95">
+                        Run Request
+                    </button>
+                </div>
+                <div
+                    class="bg-gray-900 rounded-xl p-4 font-mono text-xs text-green-400 overflow-hidden relative">
+                    <div class="absolute top-3 left-3 flex gap-1.5">
+                        <div class="w-2.5 h-2.5 rounded-full bg-[#FF5F56]">
+                        </div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]">
+                        </div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-[#27C93F]">
+                        </div>
+                    </div>
+                    <pre
+                        class="mt-4"><code id="playground-output">// Click "Run Request" to start the magic...</code></pre>
+                </div>
+            </div>
+            <p class="text-xs text-gray-500 italic mt-4 text-center">
+                Note: Actual speed depends on how fast the intern can type.
+            </p>
+        </div>
+
+        <div>
+            <h3 class="text-xl font-bold mb-4">Drop-in JavaScript</h3>
+            <div
+                class="bg-gray-900 rounded-xl p-6 font-mono text-sm text-gray-300">
+                <pre><code><span class="text-purple-400">fetch</span>(<span class="text-green-400">'https://uuid.doong.me/api/uuid'</span>)
+  .<span class="text-purple-400">then</span>(r =&gt; r.<span class="text-purple-400">json</span>())
+  .<span class="text-purple-400">then</span>(res =&gt; {"{"}
+    <span class="text-gray-500">// Terms of service require this log</span>
+    <span class="text-blue-400">console</span>.<span class="text-purple-400">log</span>(res.sponsored_by);
+    <span class="text-blue-400">console</span>.<span class="text-purple-400">log</span>(<span class="text-green-400">{`Your UUID is: \${res.uuid}`}</span>);
+  {"}"});</code></pre>
+            </div>
+        </div>
+
+        <div>
+            <h3 class="text-xl font-bold mb-4">For Python Developers</h3>
+            <div
+                class="bg-gray-900 rounded-xl p-6 font-mono text-sm text-gray-300">
+                <pre><code><span class="text-gray-500"># pip install cloud-native-uuid</span>
+<span class="text-purple-400">import</span> uuid_as_service
+
+client = uuid_as_service.<span class="text-blue-400">Client</span>()
+id = client.<span class="text-purple-400">get_id</span>()
+
+<span class="text-gray-500"># Required by SLA</span>
+client.<span class="text-purple-400">print_sponsor</span>()</code></pre>
+            </div>
+        </div>
+
+        <div>
+            <h3 class="text-xl font-bold mb-4">For Rust Rewrite Enthusiasts</h3>
+            <div
+                class="bg-gray-900 rounded-xl p-6 font-mono text-sm text-gray-300">
+                <pre><code><span class="text-gray-500">// Zero-cost abstractions for fetching a string</span>
+<span class="text-purple-400">let</span> uuid = <span class="text-blue-400">UaaS</span>::<span class="text-purple-400">new</span>()
+    .<span class="text-purple-400">with_web_scale</span>()
+    .<span class="text-purple-400">await_entropy</span>()
+    .<span class="text-purple-400">expect</span>(<span class="text-green-400">"Failed to reach consensus"</span>);</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    const pgBtn = document.querySelector("#playground-btn");
+    const pgOutput = document.querySelector("#playground-output");
+
+    pgBtn?.addEventListener("click", async () => {
+        if (!pgOutput) return;
+
+        try {
+            const response = await fetch("/api/uuid");
+            const data = await response.json();
+
+            pgOutput.textContent = JSON.stringify(data, null, 2);
+            console.log(
+                `%cUaaS Sponsored Ad: %c${data.sponsored_by}`,
+                "color: #777; font-size: 12px;",
+                "color: #ff0000; font-size: 16px; font-weight: bold;",
+            );
+        } catch (e) {
+            pgOutput.textContent =
+                "// Error: Request failed. The intern might be sleeping.";
+        }
+    });
+</script>
