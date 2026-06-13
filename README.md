@@ -2,15 +2,15 @@
 
 > "Stop generating UUIDs locally like a caveman. It's 2026. Use the cloud."
 
-UaaS is a highly-available, web-scale, and slightly sarcastic UUID generation service. It features a stunning Neobrutalist macOS-style UI and a backend powered by pure cryptographic randomness (and Joe's morale).
+UaaS is a highly-available, web-scale, and slightly sarcastic UUID generation service. It features a stunning Neobrutalist macOS-style UI and a backend powered by pure cryptographic randomness (and Barnaby's morale).
 
 ## 🌟 Key Features
 
 - **Web-Scale Output**: Every UUID is guaranteed to be unique within this dimension.
-- **Deduplication Engine**: Our intern, Joe, manually checks each UUID against a printed list to ensure no duplicates.
+- **Deduplication Engine**: Our intern, Barnaby, manually checks each UUID against a printed list to ensure no duplicates.
 - **Mac-Style UI**: A beautiful, window-based interface with red/yellow/green controls (on the left, as God intended).
 - **Integrated Advertising**: Enjoy high-quality, fictional sponsored content directly in your \`console.log\`.
-- **99.9% Operational**: We only go down when Joe is on leave (which is often).
+- **99.9% Operational**: We only go down when Barnaby is on leave (which is often).
 
 ## 🛠 Tech Stack
 
@@ -65,7 +65,7 @@ bun run dev
 ## 👥 The Team
 
 - **Dong**: Founder & Visionary.
-- **Joe**: Senior Intern. Currently on administrative leave in Tokyo with his AI girlfriend.
+- **Barnaby**: Senior Intern. Currently on administrative leave in Tokyo with his AI girlfriend.
 
 ## 📄 License & TOS
 
