@@ -36,7 +36,7 @@
                     </button>
                 </div>
                 <div
-                    class="bg-gray-900 rounded-xl p-4 font-mono text-xs text-green-400 overflow-hidden relative">
+                    class="bg-gray-900 rounded-xl p-4 font-mono text-xs text-green-400 overflow-x-auto relative">
                     <div class="absolute top-3 left-3 flex gap-1.5">
                         <div class="w-2.5 h-2.5 rounded-full bg-[#FF5F56]">
                         </div>
@@ -49,7 +49,8 @@
                         class="mt-4"><code id="playground-output">// Click "Run Request" to start the magic...</code></pre>
                 </div>
             </div>
-            <p class="text-xs text-gray-500 italic mt-4 text-center">
+            <p
+                class="text-[min(2.7vw,0.75rem)] text-gray-500 italic mt-4 text-center">
                 Note: Actual speed depends on how fast the intern can type.
             </p>
         </div>
@@ -57,7 +58,7 @@
         <div>
             <h3 class="text-xl font-bold mb-4">Drop-in JavaScript</h3>
             <div
-                class="bg-gray-900 rounded-xl p-6 font-mono text-sm text-gray-300">
+                class="bg-gray-900 rounded-xl p-6 font-mono text-sm text-gray-300 overflow-x-auto">
                 <pre><code><span class="text-purple-400">fetch</span>(<span class="text-green-400">'https://uuid.doong.me/api/uuid'</span>)
   .<span class="text-purple-400">then</span>(r =&gt; r.<span class="text-purple-400">json</span>())
   .<span class="text-purple-400">then</span>(res =&gt; {"{"}
@@ -71,7 +72,7 @@
         <div>
             <h3 class="text-xl font-bold mb-4">For Python Developers</h3>
             <div
-                class="bg-gray-900 rounded-xl p-6 font-mono text-sm text-gray-300">
+                class="bg-gray-900 rounded-xl p-6 font-mono text-sm text-gray-300 overflow-x-auto">
                 <pre><code><span class="text-gray-500"># pip install uaas</span>
 <span class="text-purple-400">import</span> uaas <span class="text-purple-400">as</span> uuid_as_service
 
@@ -86,7 +87,7 @@ client.<span class="text-purple-400">print_sponsor</span>()</code></pre>
         <div>
             <h3 class="text-xl font-bold mb-4">For Rust Rewrite Enthusiasts</h3>
             <div
-                class="bg-gray-900 rounded-xl p-6 font-mono text-sm text-gray-300">
+                class="bg-gray-900 rounded-xl p-6 font-mono text-sm text-gray-300 overflow-x-auto">
                 <pre><code><span class="text-gray-500">// Zero-cost abstractions for fetching a string</span>
 <span class="text-purple-400">let</span> uuid = <span class="text-blue-400">UaaS</span>::<span class="text-purple-400">new</span>()
     .<span class="text-purple-400">with_web_scale</span>()

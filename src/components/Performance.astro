@@ -3,42 +3,53 @@
 ---
 
 <section
-    class="max-w-4xl mx-auto px-6 py-20 border-t border-gray-100 text-center">
+    class="max-w-4xl mx-auto px-6 py-12 sm:py-20 border-t border-gray-100 text-center">
     <h2 class="text-3xl font-bold mb-4">Unmatched Performance</h2>
     <p class="text-gray-600 mb-12">
         We benchmarked our API against traditional local generation. The results
         are scientifically indisputable.
     </p>
 
-    <div class="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm">
-        <div class="flex items-end gap-4 h-64 mb-8">
-            <div class="flex-1 h-full flex flex-col justify-end items-center">
+    <div
+        class="bg-white border border-gray-200 rounded-3xl p-4 sm:p-8 shadow-sm">
+        <div class="flex items-end gap-2 sm:gap-4 h-48 sm:h-64 mb-8">
+            <div
+                class="flex-1 h-full flex flex-col justify-end items-center min-w-0">
                 <div
-                    class="w-full bg-gray-200 rounded-t-lg transition-all hover:bg-gray-300"
+                    class="w-full max-w-[80px] bg-gray-200 rounded-t-lg transition-all hover:bg-gray-300"
                     style="height: 10%;">
                 </div>
-                <span class="text-xs mt-2 font-medium">Local (Slow)</span>
-            </div>
-            <div class="flex-1 h-full flex flex-col justify-end items-center">
-                <div
-                    class="w-full bg-gray-200 rounded-t-lg transition-all hover:bg-gray-300"
-                    style="height: 15%;">
-                </div>
-                <span class="text-xs mt-2 font-medium">crypto.randomUUID()</span
+                <span
+                    class="text-[10px] sm:text-xs mt-2 font-medium text-center truncate w-full"
+                    >Local (Slow)</span
                 >
             </div>
-            <div class="flex-1 h-full flex flex-col justify-end items-center">
+            <div
+                class="flex-1 h-full flex flex-col justify-end items-center min-w-0">
                 <div
-                    class="w-full bg-blue-600 rounded-t-lg animate-pulse"
+                    class="w-full max-w-[80px] bg-gray-200 rounded-t-lg transition-all hover:bg-gray-300"
+                    style="height: 15%;">
+                </div>
+                <span
+                    class="text-[10px] sm:text-xs mt-2 font-medium text-center truncate w-full"
+                    >crypto.randomUUID()</span
+                >
+            </div>
+            <div
+                class="flex-1 h-full flex flex-col justify-end items-center min-w-0">
+                <div
+                    class="w-full max-w-[80px] bg-blue-600 rounded-t-lg animate-pulse"
                     style="height: 100%;">
                 </div>
-                <span class="text-xs mt-2 font-bold text-blue-600"
+                <span
+                    class="text-[10px] sm:text-xs mt-2 font-bold text-blue-600 text-center truncate w-full"
                     >UaaS (WEB SCALE)</span
                 >
             </div>
         </div>
-        <p class="text-xs text-gray-400">
-            * Benchmarks performed while Barnaby was eating a very spicy burrito.
+        <p class="text-[min(2.1vw,0.75rem)] text-gray-400">
+            * Benchmarks performed while Barnaby was eating a very spicy
+            burrito.
         </p>
     </div>
 </section>
