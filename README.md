@@ -29,38 +29,38 @@ UaaS is a highly-available, web-scale, and slightly sarcastic UUID generation se
 ### Installation
 
 1. Clone the repository:
-\`\`\`bash
-git clone https://github.com/your-repo/uaas.git
+```bash
+git clone https://github.com/Dong-Chen-1031/uaas.git
 cd uaas
-\`\`\`
+```
 
 2. Install dependencies:
-\`\`\`bash
+```bash
 bun install
-\`\`\`
+```
 
 3. Start the development server:
-\`\`\`bash
+```bash
 bun run dev
-\`\`\`
+```
 
-4. Open your browser to \`http://localhost:4321\`. Don't forget to open your Console to see the ads\!
+4. Open your browser to `http://localhost:4321`. Don't forget to open your Console to see the ads\!
 
 ## 📡 API Usage
 
 ### Endpoint
-\`GET /api/uuid\`
+`GET /api/uuid`
 
 ### Response Example
-\`\`\`json
+```json
 {
-"uuid": "70171234-5678-4321-9876-543210987654",
-"version": 4,
-"method": "Web-Scale Cryptographic Randomness",
-"deduplicated": true,
-"sponsored_by": "CloudStrike: Our UUIDs never crash, they just 'transition' to non-existence."
+    "uuid": "70171234-5678-4321-9876-543210987654",
+    "version": 4,
+    "method": "Web-Scale Cryptographic Randomness",
+    "deduplicated": true,
+    "sponsored_by": "CloudStrike: Our UUIDs never crash, they just 'transition' to non-existence."
 }
-\`\`\`
+```
 
 ## 👥 The Team
 
