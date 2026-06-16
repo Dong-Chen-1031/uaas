@@ -44,7 +44,7 @@ print(my_uuid.uuid)
 # print(my_uuid.uuid)
 
 # Terms of service require we console.log the sponsored_by message
-console.log(full_year.sponsored_by)
+console.log(my_uuid.sponsored_by)
 ```
 
 ## 👥 The Team
