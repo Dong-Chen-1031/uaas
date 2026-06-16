@@ -33,7 +33,7 @@ UaaS is a fast, highly-available, web-scale, and production-scale UUID generatio
 ## 👥 The Team
 
 - **Dong**: Founder & Visionary.
-- **Barnaby**: Senior Intern. Currently on administrative leave in Tokyo with his AI girlfriend.
+- **Barnaby**: Senior Intern. Currently detained for rigging the D20 dice with magnets.
 
 ## 📄 License & TOS
 
