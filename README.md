@@ -2,49 +2,17 @@
 
 > "Stop generating UUIDs locally like a caveman. It's 2026. Use the cloud."
 
-UaaS is a highly-available, web-scale, and slightly sarcastic UUID generation service. It features a stunning Neobrutalist macOS-style UI and a backend powered by pure cryptographic randomness (and Barnaby's morale).
+UaaS is a fast, highly-available, web-scale, and production-scale UUID generation service.
+
+[![Get Started](https://img.shields.io/badge/get_started-fcc800?style=for-the-badge)](https://uuid.doong.me)
+
 
 ## 🌟 Key Features
 
 - **Web-Scale Output**: Every UUID is guaranteed to be unique within this dimension.
-- **Deduplication Engine**: Our intern, Barnaby, manually checks each UUID against a printed list to ensure no duplicates.
-- **Mac-Style UI**: A beautiful, window-based interface with red/yellow/green controls (on the left, as God intended).
+- **Deduplication Engine**: Our intern, Barnaby, manually checks each UUID against a printed list to ensure no duplicates.\
 - **Integrated Advertising**: Enjoy high-quality, fictional sponsored content directly in your \`console.log\`.
 - **99.9% Operational**: We only go down when Barnaby is on leave (which is often).
-
-## 🛠 Tech Stack
-
-- **Framework**: Astro (v5.0+)
-- **Styling**: Tailwind CSS (v4.0)
-- **Runtime**: Cloudflare Workers (SSR Mode)
-- **Icons**: Lucide-Astro
-- **Backend API**: Integrated Astro API routes at \`/api/uuid\`
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- [Bun](https://bun.sh/) (because \`npm\` is so 2023)
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/Dong-Chen-1031/uaas.git
-cd uaas
-```
-
-2. Install dependencies:
-```bash
-bun install
-```
-
-3. Start the development server:
-```bash
-bun run dev
-```
-
-4. Open your browser to `http://localhost:4321`. Don't forget to open your Console to see the ads\!
 
 ## 📡 API Usage
 
@@ -72,7 +40,6 @@ bun run dev
 By using this project, you agree to:
 1. Accept all logs dumped to your browser console.
 2. Never ask about the alkaline battery incident of June 2026.
-3. Admit that macOS window controls belong on the left.
 
 ---
 
