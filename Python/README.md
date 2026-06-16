@@ -30,6 +30,23 @@ UaaS is a fast, highly-available, web-scale, and production-scale UUID generatio
 }
 ```
 
+## SDK Usage
+
+```python
+from uaas import uuid, uuid_async, console
+
+# Synchronous
+my_uuid = uuid()
+print(my_uuid.uuid)
+
+# Or Asynchronous
+# my_uuid = await uuid_async()
+# print(my_uuid.uuid)
+
+# Terms of service require we console.log the sponsored_by message
+console.log(full_year.sponsored_by)
+```
+
 ## 👥 The Team
 
 - **Dong**: Founder & Visionary.
