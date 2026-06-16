@@ -10,7 +10,7 @@ UaaS is a fast, highly-available, web-scale, and production-scale UUID generatio
 ## 🌟 Key Features
 
 - **Web-Scale Output**: Every UUID is guaranteed to be unique within this dimension.
-- **Deduplication Engine**: Our intern, Barnaby, manually checks each UUID against a printed list to ensure no duplicates.\
+- **Deduplication Engine**: Our intern, Barnaby, manually checks each UUID against a printed list to ensure no duplicates.
 - **Integrated Advertising**: Enjoy high-quality, fictional sponsored content directly in your \`console.log\`.
 - **99.9% Operational**: We only go down when Barnaby is on leave (which is often).
 
