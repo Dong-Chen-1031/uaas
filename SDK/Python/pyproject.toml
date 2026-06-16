@@ -1,6 +1,6 @@
 [project]
 name = "uaas"
-version = "0.1.0"
+version = "1.0.0"
 description = "UaaS is a fast, highly-available, web-scale, and production-scale UUID generation service."
 readme = "README.md"
 authors = [
