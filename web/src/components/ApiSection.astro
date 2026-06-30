@@ -31,7 +31,7 @@
                     </div>
                     <button
                         id="playground-btn"
-                        class="bg-black text-white px-6 py-2 rounded-full font-bold hover:bg-gray-800 transition-colors active:scale-95">
+                        class="bg-black text-white px-6 py-2 rounded-xl font-black shadow-[0_4px_0_0_#333] hover:shadow-none hover:translate-y-1 transition-all active:scale-95">
                         Run Request
                     </button>
                 </div>
@@ -73,18 +73,22 @@
             <h3 class="text-xl font-bold mb-4">For Python Developers</h3>
             <div
                 class="bg-gray-900 rounded-xl p-6 font-mono text-sm text-gray-300 overflow-x-auto">
-                <pre><code><span class="text-gray-500"># pip install uaas</span>
-<span class="text-purple-400">import</span> uaas <span class="text-purple-400">as</span> uuid_as_service
+                <pre><code><span class="text-purple-400">from</span> uaas <span class="text-purple-400">import</span> uuid, uuid_async, console
 
-client = uuid_as_service.<span class="text-blue-400">Client</span>()
-id = client.<span class="text-purple-400">get_id</span>()
+<span class="text-gray-500"># Synchronous</span>
+my_uuid = <span class="text-purple-400">uuid</span>()
+<span class="text-purple-400">print</span>(my_uuid.uuid)
 
-<span class="text-gray-500"># Required by SLA</span>
-client.<span class="text-purple-400">print_sponsor</span>()</code></pre>
+<span class="text-gray-500"># Or Asynchronous</span>
+<span class="text-gray-500"># my_uuid = await uuid_async()</span>
+<span class="text-gray-500"># print(my_uuid.uuid)</span>
+
+<span class="text-gray-500"># Terms of service require we console.log the sponsored_by message</span>
+console.<span class="text-purple-400">log</span>(my_uuid.sponsored_by)</code></pre>
             </div>
         </div>
 
-        <div>
+        <!-- <div>
             <h3 class="text-xl font-bold mb-4">For Rust Rewrite Enthusiasts</h3>
             <div
                 class="bg-gray-900 rounded-xl p-6 font-mono text-sm text-gray-300 overflow-x-auto">
@@ -94,7 +98,7 @@ client.<span class="text-purple-400">print_sponsor</span>()</code></pre>
     .<span class="text-purple-400">await_entropy</span>()
     .<span class="text-purple-400">expect</span>(<span class="text-green-400">"Failed to reach consensus"</span>);</code></pre>
             </div>
-        </div>
+        </div> -->
     </div>
 </section>
 
